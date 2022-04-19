@@ -1,0 +1,13 @@
+﻿{
+  "Id": "0H8R8eoCfEG3LktpGqVsmA",
+  "Reference": "I18yv_2vB0epi9mYg68hZg/0H8R8eoCfEG3LktpGqVsmA",
+  "ParentRef": "I18yv_2vB0epi9mYg68hZg/Zr_fjY0gjEug9u0u6Uv0qA",
+  "Name": "ReporteKeyWords.xlsx - Excel",
+  "Type": "Screen",
+  "Created": "2022-04-17T18:06:56.7430628Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=21.10.5.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-04-17T18:06:56.7430628Z"
+}

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetApp Area="0, 0, 0, 0" Arguments="c:\users\javie_c2zwkpq\documents\platzi\uipathstudio_curso\proyectofinalplatzi\proyectofinalplatzi\data\output\reportekeywords.xlsx" ContentHash="ZnVgrx93gEeiYM1qsOGMwQ" FilePath="C:\Program Files (x86)\Microsoft Office\root\Office16\excel.exe" Selector="&lt;wnd app='excel.exe' cls='XLMAIN' title='ReporteKeyWords.xlsx - Excel'/&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="IconBase64" xmlns="">0G9__UklOxE2on05rbOY5Wg</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="60e03d8e5b11007b8c2935d6e67dd6e2.png" xmlns="">0Z1ddZrWhO0uV0qguOTLouw</imageRef>
+</TargetApp>

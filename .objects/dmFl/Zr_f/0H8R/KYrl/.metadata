@@ -1,0 +1,14 @@
+﻿{
+  "Id": "KYrlo6PxmkqkMQkhuNLGVg",
+  "Reference": "I18yv_2vB0epi9mYg68hZg/KYrlo6PxmkqkMQkhuNLGVg",
+  "ParentRef": "I18yv_2vB0epi9mYg68hZg/0H8R8eoCfEG3LktpGqVsmA",
+  "Name": "Delete",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Created": "2022-04-17T18:07:10.4006822Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=21.10.5.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-04-17T18:07:10.4006822Z"
+}

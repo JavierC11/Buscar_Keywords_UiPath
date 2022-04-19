@@ -1,0 +1,183 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Initialize_Applications" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="ArgumentoArrayKeywords" Type="OutArgument(s:String[])" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1050,1335</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Initialization_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="35">
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Management.Automation</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="33">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Management.Automation</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>TimeSpan2</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="540,1270" sap2010:WorkflowViewState.IdRef="Sequence_9">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="TextoLeido" />
+      <Variable x:TypeArguments="x:String" Default="C:\Users\javie_c2zwkpq\Documents\Platzi\UipathStudio_Curso\ProyectoFinalPlatzi\ProyectoFinalPlatzi\Data\Input\PalabrasClaves.txt" Name="Keywords" />
+      <Variable x:TypeArguments="s:String[]" Name="ArrayKeywords" />
+      <Variable x:TypeArguments="x:Boolean" Default="True" Name="ProcesStatus" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="498,1147" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: File Explorer" sap:VirtualizedContainerService.HintSize="460,920" sap2010:WorkflowViewState.IdRef="NApplicationCard_12" OpenMode="Always" ScopeGuid="10f24f16-1349-4513-8872-21e4dc80f277" Version="V1">
+          <uix:NApplicationCard.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="426,631" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Address: Quick access'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="384,216" sap2010:WorkflowViewState.IdRef="NTypeInto_8" ScopeIdentifier="10f24f16-1349-4513-8872-21e4dc80f277" Text="[Keywords]" Version="V1">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable DesignTimeRectangle="152, 95, 913, 34" ElementType="Toolbar" FriendlyName="'Address: Quick access'" FullSelectorArgument="&lt;wnd cls='ToolbarWindow32' title='Address: Quick access' /&gt;" FuzzySelectorArgument="&lt;wnd cls='ToolbarWindow32' title='Address: Quick access' check:text='Address: Quick access' /&gt;" Guid="0bc32489-f419-44de-99d7-23166d0626f1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAA5UAAAAmCAYAAABUHr+VAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATvSURBVHhe7d09jBRlGMDx27vjTmOCAUVCi8UlEEs/Ggq1xMpLbKUjJyYmhM5IhxFDoaWFjTHBSKOHhYiC8hHFT7QiRMSESlBJSEAFdh/nWX3NuDe7dzchQMJvkl929n1n3lnKf97dY2zdunUBAAAAbYhKAAAAWhubnZ0NAAAAaMNOJQAAAK2JSgAAAFoTlQAAALQmKgEAAGhNVAIAANCaqAQAAKA1UQkAAEBrohIAAIDWlhWVu+fujVfmVjbOAQAAcOdZclTOPLg2Tr9xV/zy9nT/vOkaAAAA7ixLjsrnZ1fHn+9PxR/7V8Qrz9mtBAAAYBlR+eNb03HtyGRcOzoRv85P3ZLdyvn5+agfJ0+ebLxu0NatW+PixYv916b5tGnTprhw4cLIawAAAPi/xqicWb82Hn5obTy7eXW8uOXemH/5nvjr4ER0vxmvdOLa4YnYv/ueePX5lbHlqdXx5KNrFqxxo2VQXrp0qR9/ZSyjcqlhuRhRCQAAsHyNUfnT3qn+V13/+nBFXP1kMq5+OhHXT4xH7/tOxPdj0T0xEdeOjPfj8urHlQOTcfbdqQXrDNq2bVts3769cW6UDL0MvnpQpg0bNsSpU6duSAiKSgAAgOVrjMonHl0TF/ZNxdXcncyY/Has0oned2MR31Wv31RxWcm564cm4rf3V1T33L9gnUH79u3rf211165djfPD7NmzZ+iOZI7nLuZgFNbfD85ljJ49e7b/WfLI9Qevz13RpmfmWDnq801rjhrP51y5cqU/VnZgm64ddj8AAMDtYOhvKp+sIvG396bi+mdVVH5VxWQVkb2vq9dKvu+dqKLy6Hj8vn+yf23TGoPWr18fx44d68fRcsIyo3FYVObccqKyRFreU1+nXLNjx47+/GLxtpQ1F3tW+az5rLwmXwf/nU1jAAAAt4uRf6gnfyuZu5Dd41VYVhEZX2ZMVr4Yq4KyE79/UAXlY0sLymLjxo1x+fLl6PV6MTMz03jNoFFhlTGWBkOt/r5+nvI8x+rrlGvOnz+/IALr8rOUI3caR605arzsUpYj/31lvP78pjEAAIDbxcioTD+8OR3dz6qg/HzsX9X58U5/7Od3JhvvGabtTuWwOMudwPKbyhKFeZ5z9ff182Fr5fv8Guq5c+eGBmz93vqzh6253PEiAzKPDNhRYwAAALfaolF5/eB4dD8dj97RTvSqkOwdqaKy0jtc+aTTeM8wbX9TmTL08qukGXP5vny1tARgeV+iK1/LTmLGW0ZcnpfrBnf+6tfkmk07g7lm+Qx5XflvSoatOepZGbBNzyhybnC+aQwAAOBWWuTrr/dH92AnulU8povzE9H7+J+Y7B2qVOcPP/RA471N5ubmWv311yKDqn6UaCzzGX3lOH369H+RWA/GvK5EXTnyvqbwLAFZ1i/jeeSO5pkzZ0auOWo876t/BTZDtv758568t2msfB4AAIBbbWRUbtm8KroHxqP7USf2vnR3PyAfqbyz8+7oVbHZq8ZfeGZV4703QwmzwbgEAADg5hgZlS9tWRlHX5uOpx+/b8FcxuXx16dj57MrF8wBAABwZ1j0N5UAAAAwjKgEAACgNVEJAABAa6ISAACA1kQlAAAArYlKAAAAWhOVAAAAtCYqAQAAaE1UAgAA0JqoBAAAoLWx2dnZAAAAgDbsVAIAANCaqAQAAKCldfE3KM8B/TxQtbUAAAAASUVORK5CYII=" InformativeScreenshot="210a00ff799284e904110afa1112cf26.png" ScopeSelectorArgument="&lt;wnd app='explorer.exe' cls='CabinetWClass' title='File Explorer' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                  </uix:NTypeInto.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NTypeInto>
+                <ui:ReadTextFile Content="[TextoLeido]" DisplayName="Read Text File" FileName="[Keywords]" sap:VirtualizedContainerService.HintSize="384,79" sap2010:WorkflowViewState.IdRef="ReadTextFile_4" />
+                <Assign sap:VirtualizedContainerService.HintSize="384,61" sap2010:WorkflowViewState.IdRef="Assign_4">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="s:String[]">[ArrayKeywords]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="s:String[]">[Split(TextoLeido,",")]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <Assign sap:VirtualizedContainerService.HintSize="384,61" sap2010:WorkflowViewState.IdRef="Assign_5">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="s:String[]">[ArgumentoArrayKeywords]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="s:String[]">[ArrayKeywords]</InArgument>
+                  </Assign.Value>
+                </Assign>
+              </Sequence>
+            </ActivityAction>
+          </uix:NApplicationCard.Body>
+          <uix:NApplicationCard.TargetApp>
+            <uix:TargetApp Area="-1366, 378, 1366, 768" FilePath="C:\Windows\explorer.exe" IconBase64="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" InformativeScreenshot="ee3a153d95b51000024ebfeeaa67c855.png" Selector="&lt;wnd app='explorer.exe' cls='CabinetWClass' title='File Explorer'/&gt;" />
+          </uix:NApplicationCard.TargetApp>
+        </uix:NApplicationCard>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="464,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence sap:VirtualizedContainerService.HintSize="376,283" sap2010:WorkflowViewState.IdRef="Sequence_24">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error" Message="[&quot;No es posible trabajar esto sin el archivo Keyword &quot; + exception.Message]" />
+              <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Boolean">[ProcesStatus]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                </Assign.Value>
+              </Assign>
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+  </Sequence>
+</Activity>

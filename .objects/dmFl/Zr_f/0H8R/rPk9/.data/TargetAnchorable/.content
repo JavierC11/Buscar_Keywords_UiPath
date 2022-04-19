@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable ContentHash="n6LUimrtKEW8LQiAFmYXVg" DesignTimeRectangle="108, 678, 65, 28" FriendlyName="'Sheet1'" FullSelectorArgument="&lt;uia automationid='ReporteKeyWords.xlsx' cls='ExcelBookTabControl' name='ReporteKeyWords' /&gt;&lt;uia automationid='SheetTab' name='Sheet1' role='Sheet Tab' /&gt;" FuzzySelectorArgument="&lt;uia automationid='ReporteKeyWords.xlsx' cls='ExcelBookTabControl' name='ReporteKeyWords' /&gt;&lt;uia automationid='SheetTab' name='Sheet1' role='Sheet Tab' check:fulltext='Sheet1' /&gt;" Guid="7f4a9249-666e-40f4-ada1-2180dea9c9a0" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='ReporteKeyWords.xlsx - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0UIq1mYOCFk-GJgrysLP87A</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="d9aab836ca1670a81d8e294f9fed30f1.png" xmlns="">0pAB4dlhADk2sxSYn-YRo0g</imageRef>
+</TargetAnchorable>

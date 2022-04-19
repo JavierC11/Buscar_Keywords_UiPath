@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable ContentHash="AN3WxDZQp0mS_twGPWH9aw" DesignTimeRectangle="143, 436, 145, 28" FriendlyName="'Delete'" FullSelectorArgument="&lt;uia cls='NetUITWMenuItemGroup' /&gt;&lt;uia cls='NetUITWBtnMenuItem' name='Delete' /&gt;" FuzzySelectorArgument="&lt;uia cls='NetUITWMenuItemGroup' /&gt;&lt;uia cls='NetUITWBtnMenuItem' name='Delete' role='Menu Item' automationid='' check:fulltext='Delete' /&gt;" Guid="72696527-ffda-40bf-9147-225c98495c20" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='ReporteKeyWords.xlsx - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0thDYyu0vQ0iDYoUSH76W3Q</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="aee584dab626dc08e3d1c2966b3698a4.png" xmlns="">03PF85SB5-UeEZ6Jm673qCQ</imageRef>
+</TargetAnchorable>
